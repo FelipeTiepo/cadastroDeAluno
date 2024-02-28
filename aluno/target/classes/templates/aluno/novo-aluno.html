@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar novo aluno</title>
+</head>
+<body>
+
+    <h1>Cadastrar novo aluno</h1>
+
+    <form name="form-cadastro" action="#" th:action="@{/alunos/salvar}" th:object="${aluno}" method="post">
+
+        <label for="nome">Nome do aluno:</label>
+        <input id="nome" th:field="*{nome}" name="nome" placeholder="Nome do aluno"> <br>
+        <label for="email">Email do aluno:</label>
+        <input type="email" id="email" th:field="*{email}" name="email" placeholder="Email do aluno"> <br>
+        <label for="rm">Rm do aluno:</label>
+        <input type="text" id="rm" th:field="*{rm}" name="rm" placeholder="Rm do aluno"><br>
+        <label for="rm">Turma do aluno:</label>
+        <input type="text" id="turma" th:field="*{turma}" name="turma" placeholder="Turma do aluno"><br>
+        <input type="submit" value="Cadastrar">
+
+    </form>
+
+
+</body>
+</html>
